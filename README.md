@@ -39,13 +39,13 @@
 - EBS (Elastic Block Store)
   - 컴퓨터에 HDD 추가와 비슷 (떼서 다른데 붙일수도)
 - EFS (Elastic File System)
-  - <img src="https://user-images.githubusercontent.com/51365114/119627750-716f3100-be47-11eb-8e83-686b23c2c161.png  width="10" height="10"/>
+<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/41882e622c8ba490b48ad64d30ac128c_b-934813-d-d-538-4167-9099-27569-a-28-b-024.png"  width="10" height="10"/>
   - ![title](https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/41882e622c8ba490b48ad64d30ac128c_b-934813-d-d-538-4167-9099-27569-a-28-b-024.png){: width="10" height="10"}
   - AWS NAS (Network Attached Storage)
 - S3 (Simple Storage Service)
   - 
 
-
+<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/core-aws-services/store-and-retrieve-data-with-aws/images/41882e622c8ba490b48ad64d30ac128c_b-934813-d-d-538-4167-9099-27569-a-28-b-024.png"  width="10" height="10"/>
 
 
 
