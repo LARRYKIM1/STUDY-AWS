@@ -1,3 +1,22 @@
+## Course Details
+
+In this course, Jeremy Villeneuve breaks down key AWS services, giving developers a high-level look at the different ways they can host applications within AWS, as well as how to decide which services will fit their use case.
+
+## Learning objectives
+
+- Proper security for the AWS root account
+- Identity and Access Management (IAM)
+- Regions and availability zones
+- Creating an EC2 instance web server
+- Editing security groups
+- Storing and serving files from AWS
+- Scaling with Elastic Load Balancer (ELB)
+- Hosting databases within AWS
+- Running containers on AWS
+- Machine learning services within AWS
+- DevOps with AWS
+- Security on AWS
+
 ## 1 Setup
 
 생략
@@ -122,6 +141,112 @@
   - A NAT gateway will not allow public originating internet traffic to pass to a server, but an Internet gateway will allow it.
 - Why would you create a private subnet within a VPC?
   - to isolate database and file servers from public internet traffic
+
+## 6 Database as a Service (DBaaS)
+
+- 클라우드 제공자가 DB와 백업을 관리해준다.
+- Database Migration Service
+  - 온프로미스를 클라우드 환경으로 가져오게 해준다. 
+- RDS (Relational Database Service)
+  - 지원 가능: PostgreSQL, MySQL, SQL Server, Oracle
+  - PostgreSQL에서 single-AZ가 있고 multi-AZ가 있는데, 인스턴스 여러개 돌릴 거면 멀티 
+- Amazon Aurora 
+  - MySQL과 PostgreSQL와 비슷한데 AWS에서 편하게 관리해준다. 
+  - 비용이 1/10
+- NoSQL
+  - DynamoDB
+- DocumentDB
+  - MongoDB랑 비슷 
+- ElasticCache
+  - 인메모리 캐시를 관리해준다. 
+  - Redis, Memcachsed 
+- 빅데이터 DB 
+  - Data Lake 
+    - 분석, 머신러닝, 실시간 데이터 모든게 들어감 
+  - RedShift 
+    - 클라우드에서 완벽하게 관리되는 페타바이트급 데이터 웨어하우스 서비스입니다. 작게는 수백 기가바이트부터 시작하여 페타바이트 이상까지 ~
+  - [EMR](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kbh3983&logNo=221084176372) (Elastic MapReduce)
+    -  Hadoop, Spark 
+  - Athena
+    - S3에 있는 데이터를 직접 간편하게 분석할 수 있는 대화형 쿼리 서비스
+- 메시징 서비스 
+  - Kinesis
+    - 실시간 데이터 
+  - SQS (Simple Queue Serivce) 
+  - SNS (Simple Notification Service)
+  - 3개 중에 어떤걸 골라야 할까? 는 올바른 질문이 아니고, 각각 언제 사용해야될까로 질문
+- 더 공부를 위해 Designing Data-Intensive Applications 책 추천 
+
+### QUIZ
+
+- You have 10,000 Internet of Things devices that are sending in real-time telemetry on vehicle movement at 5-second intervals. What is the best service to capture this data?
+  - SNS
+  - MQ
+  - SQS
+  - Kinesis (정답)
+- If you need to store large streams of user activity data coming from a web and mobile application and generate aggregated reports on usage patterns, which database is the best choice?
+  - Aurora
+  - RDS for SQL Server
+  - Neptune
+  - Redshift (정답)
+- What in-memory caching server is NOT supported by ElastiCache?
+  - Memcached
+  - Redis 3
+  - Redis 5
+  - Elasticsearch (정답)
+- Which database is a NoSQL database type that can quickly store and retrieve key value pairs?
+  - DynamoDB
+- You are going to host an application that uses a MySQL database, but you do not want to manage scaling or database administration tasks. What is the best choice for hosting this database?
+  - Aurora
+- What is a valid use case for a queue or message broker that would sit in front of your relational database?
+  - when you need to ingest a large stream of data
+
+## 7 PaaS (Platfrom as a Service )
+
+- Elastic Beanstalk
+  - 클라우드에 어플리케이션 관리와 배포를 할 수 있다.
+- Running container on AWS
+  - [ECR](https://www.youtube.com/watch?v=H73uX0TOX9g) (Elastic Container Registry)
+    - 컨테이너 관리 
+- Lambda
+  - FaaS (Function as a Service ) 개념
+  - 싱글 execution을 계속 할 수 있음 
+  - Serverless Architecture 
+- Batch Processing
+  - EC2 Spot Instance
+    - 대폭 할인된 가격으로 사용할 수 있는 AWS 클라우드의 예비 컴퓨팅 용량입니다.
+  - Step Function
+  - Simple Workflow (SWF)
+
+### QUIZ
+
+- What is usually the best service for implementing a multi-step workflow within AWS?
+  - Step Functions
+- You can create an entire web application using Lambda functions.
+  - TRUE
+    - API Gateway and Application Load Balancer can pass requests and responses to and from Lambda functions.
+- Which service can host a Docker container? 
+  - Elastic Compute Cloud (EC2)
+  - Elastic Beanstalk
+  - All of these services can be used as a Docker host. (정답)
+  - Elastic Container Service (ECS)
+- Which AWS service can host the web application server for a Wordpress site?
+  - Elastic Beanstalk
+
+## 8 Software as a Service 
+
+- User Authentication 
+  - 
+- Mobile Service
+  - 
+- Machine Learning
+  - 
+- Media Services
+  - 
+- IOT
+  - 
+
+
 
 
 
