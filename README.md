@@ -236,15 +236,43 @@ In this course, Jeremy Villeneuve breaks down key AWS services, giving developer
 ## 8 Software as a Service 
 
 - User Authentication 
-  - 
+  - Cognitive 
+    - 페이스북 구글 로그인 가능 
 - Mobile Service
-  - 
+  - AppSync
+  - Amplify
+    - 사용하기 쉬운 CLI 제공 
 - Machine Learning
-  - 
+  - SageMaker 
+    - 러닝머신 모델을 만들게 도와준다. 
+  - Lex
+    - 챗박스 만들 때 사용 
+  - Personalize
+    - 제품 추천할때 사용 가능
+  - Polly
+    - 목소리 
+  - Rekognition
+  - Textract
+  - Translate 
+  - Transcribe
 - Media Services
-  - 
+  - MediaConvert 
 - IOT
-  - 
+  - AWS IOT Core 장치들 관리 가능
+
+### QUIZ
+
+- To use IoT Core to track the state of your Internet of Things (IoT) appliances, you must select a device that is already certified for use with IoT Core.
+  - FALSE
+    - You can integrate any device with IoT Core if you can communicate with it using HTTP, WebSockets, or MQTT.
+- What service can be used to transcode and splice together movie clips?
+  - MediaConvert
+- What service will identify the things it finds in an image?
+  - Rekognition
+- What service can manage a REST API layer?
+  - API Gateway
+- What service can handle user authentication for your web and mobile applications?
+  - Cognito
 
 
 
