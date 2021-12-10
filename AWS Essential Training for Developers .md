@@ -262,7 +262,7 @@ In this course, Jeremy Villeneuve breaks down key AWS services, giving developer
 
 ### QUIZ
 
-- To use IoT Core to track the state of your Internet of Things (IoT) appliances, you must select a device that is already certified for use with IoT Core.
+-  To use IoT Core to track the state of your Internet of Things (IoT) appliances, you must select a device that is already certified for use with IoT Core.
   - FALSE
     - You can integrate any device with IoT Core if you can communicate with it using HTTP, WebSockets, or MQTT.
 - What service can be used to transcode and splice together movie clips?
@@ -274,7 +274,71 @@ In this course, Jeremy Villeneuve breaks down key AWS services, giving developer
 - What service can handle user authentication for your web and mobile applications?
   - Cognito
 
+## 9 DevOps with AWS
 
+- What is DevOps
+- CI/CD with AWS
+  - Release early and often
+    - bug found earlier 
+  - CodePipeLine
+  - CodeBuild
+  - CodeDeploy
+  - AWS CI/CD 추가공부는 [링크](https://www.linkedin.com/learning/aws-for-developers-ecs-and-multi-region-load-balancing/why-load-balance-across-regions?autoAdvance=true&autoSkip=false&autoplay=true&resume=true)에서
+- Infrastructure as a Code with AWS
+  - CloudFormation
+    - 리소스 관리 시간을 줄이고, 실행되는 애플리케이션에 더 많은 시간을 사용하도록 해 주는 서비스입니다.
+  - Puppet	
+    - 로드발란서가 10개의 서버로 분할할때, 서버마다 업데이가 필요할때 사용할 수 있다. 
+  - AWS OpsWorks
+- Monitoring with CloudWatch
+  - 모니터링 및 운영 데이터로 자동화된 대시보드를 사용하여 시각화
+  - twilio
+    - Programmable SMS 등 서비스 가능
+
+### QUIZ
+
+- What is something that is difficult to monitor with CloudWatch
+  - internal application performance and response times (정답)
+  - running container counts on ECS
+  - memory usage on a Linux EC2 instance
+  - status checks on an EC2 instance
+- Which tool is best at defining AWS services as code?
+  - CloudFormation
+- What's the difference between continuous integration (CI) and continuous deployment (CD)?
+  - CI automatically builds your code and runs tests against it, while CD will automatically deploy working code.
+- What is DevOps? (find 3 correct items) 
+  A. View your infrastructure as code. 
+  B. Monitor response times and application health. 
+  C. IT people learn to code. 
+  D. Operations and development teams share responsibilities. 
+  E. A set of AWS automation tools. 
+  - A,B,D
+
+## 10 Security on AWS
+
+- AWS Shield and firewalls with WAF
+  - WAF: 로드발란스에 연결하여, 방화벽으로 사용 
+    - 예, 나라별 IP 차단 
+  - Shield: DDOS attack 방어 가능 
+    - standard랑 advanced 중 택 가능
+- Inspector, GuardDuty, and Macie 
+  - 서버로그 패칭하고 침임탐지 확인하고 같은 활동이 힘들다.
+  - Inspector: 애플리케이션의 노출, 취약성 및 편차를 자동으로 평가 (자동 보안 평가 서비스)
+  - GuardDuty:  계정 및 워크로드에서 악의적 활동을 모니터링하고 상세한 보안 결과를 제공
+  - Macie: 민감한 데이터 탐지해서 알려준다. 
+- CloudTrail and Security Hub 
+  - 때때로 외부 뿐만아니라 공격자가 내부에 존재할 수도
+  - CloudTrail:  AWS 계정의 거버넌스, 규정 준수, 운영 감사, 위험 감사를 지원하는 서비스
+    - Security Hub: GuardDuty, Inspector 및 Macie와 같은 여러 AWS 서비스뿐만 아니라 AWS 파트너 솔루션에서 제공되는 보안 경고 또는 평가 결과를 단일 공간에서 수집, 정리 및 우선순위를 지정하는 서비스가 제공됩니다.
+
+### QUIZ
+
+- To comply with some of the auditing requirements of some compliance standards, what AWS tool can be enabled to maintain an audit log of access and changes to your AWS infrastructure?
+  - CloudTrail
+- An EC2 instance running a Wordpress site keeps getting hacked, even though you have restored the server several times and have patched Wordpress. What AWS service can help you detect the next time the server becomes compromised? 해킹 방어 
+  - GuardDuty
+- Web Application Firewall (WAF) deploys on top of what other AWS service?
+  - Application Load Balancer (ALB)
 
 
 
